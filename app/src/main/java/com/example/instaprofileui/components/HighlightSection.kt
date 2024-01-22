@@ -55,7 +55,7 @@ fun Highlight(
             painter = info.image,
             contentDescription = "Image",
             modifier = Modifier
-                .height(65.dp)
+                .height(70.dp)
                 .aspectRatio(1f, true)
                 .border(
                     width = 1.dp,
