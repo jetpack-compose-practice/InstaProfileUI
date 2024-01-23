@@ -6,7 +6,6 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -19,7 +18,7 @@ import com.example.instaprofileui.components.AboutSection
 import com.example.instaprofileui.components.ButtonSection
 import com.example.instaprofileui.components.HighlightInfo
 import com.example.instaprofileui.components.HighlightSection
-import com.example.instaprofileui.components.mediaData
+import com.example.instaprofileui.components.MediaData
 import com.example.instaprofileui.components.MediaSection
 import com.example.instaprofileui.components.Msg
 import com.example.instaprofileui.components.Post
@@ -60,15 +59,15 @@ fun ProfileScreen() {
         item(span = { GridItemSpan(3) }) {
             HighlightSection(
                 info = listOf(
-                    HighlightInfo(painterResource(id = R.drawable.me), "Diwali"),
-                    HighlightInfo(painterResource(id = R.drawable.me2), "Jaipur"),
-                    HighlightInfo(painterResource(id = R.drawable.wallpaper1), "Goa"),
-                    HighlightInfo(painterResource(id = R.drawable.wallpaper2), "..."),
-                    HighlightInfo(painterResource(id = R.drawable.me2), "Thailand"),
-                    HighlightInfo(painterResource(id = R.drawable.wallpaper4), "Trip"),
-                    HighlightInfo(painterResource(id = R.drawable.me), "Me"),
-                    HighlightInfo(painterResource(id = R.drawable.wallpaper3), "..."),
-                    HighlightInfo(painterResource(id = R.drawable.wallpaper1), "Delhi")
+                    HighlightInfo(painterResource(id = R.drawable.logo), "Diwali"),
+                    HighlightInfo(painterResource(id = R.drawable.logo), "Jaipur"),
+                    HighlightInfo(painterResource(id = R.drawable.logo), "Goa"),
+                    HighlightInfo(painterResource(id = R.drawable.logo), "..."),
+                    HighlightInfo(painterResource(id = R.drawable.logo), "Thailand"),
+                    HighlightInfo(painterResource(id = R.drawable.logo), "Trip"),
+                    HighlightInfo(painterResource(id = R.drawable.logo), "Me"),
+                    HighlightInfo(painterResource(id = R.drawable.logo), "..."),
+                    HighlightInfo(painterResource(id = R.drawable.logo), "Delhi")
                 )
             )
 
@@ -76,9 +75,9 @@ fun ProfileScreen() {
         item(span = { GridItemSpan(3) }) {
             MediaSection(
                 mediaData = listOf(
-                    mediaData(painterResource(id = R.drawable.ic_grid), "Posts"),
-                    mediaData(painterResource(id = R.drawable.reels), "Reels"),
-                    mediaData(painterResource(id = R.drawable.profile), "Profile"),
+                    MediaData(painterResource(id = R.drawable.ic_grid), "Posts"),
+                    MediaData(painterResource(id = R.drawable.reels), "Reels"),
+                    MediaData(painterResource(id = R.drawable.profile), "Profile"),
                 )
             ) {
                 selectedTabIndex = it
@@ -87,16 +86,18 @@ fun ProfileScreen() {
         when (selectedTabIndex) {
             0 -> items(
                 listOf(
-                    R.drawable.me2,
-                    R.drawable.jetpack_logo,
-                    R.drawable.wallpaper1,
-                    R.drawable.wallpaper3,
                     R.drawable.logo,
-                    R.drawable.me,
-                    R.drawable.wallpaper2,
-                    R.drawable.wallpaper4,
                     R.drawable.logo,
-                    R.drawable.wallpaper1
+                    R.drawable.logo,
+                    R.drawable.logo,
+                    R.drawable.logo,
+                    R.drawable.logo,
+                    R.drawable.logo,
+                    R.drawable.logo,
+                    R.drawable.logo,
+                    R.drawable.logo,
+                    R.drawable.logo,
+                    R.drawable.logo,
                 )
             ) { resourceId ->
                 Post(postData = PostData(painterResource(id = resourceId)))

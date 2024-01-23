@@ -1,7 +1,5 @@
 package com.example.instaprofileui.components
 
-import android.provider.MediaStore.Video
-import android.widget.VideoView
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,7 +15,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
@@ -25,7 +22,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-data class mediaData(
+data class MediaData(
     val image: Painter,
     val text: String
 )
@@ -33,7 +30,7 @@ data class mediaData(
 @Composable
 fun MediaSection(
     modifier: Modifier = Modifier,
-    mediaData: List<mediaData>,
+    mediaData: List<MediaData>,
     onTabSelected: (selectedIndex: Int) -> Unit
 ) {
     var selectedTabIndex: Int by remember {
